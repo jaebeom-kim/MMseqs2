@@ -91,6 +91,7 @@ class NcbiTaxonomy {
 public:
     static NcbiTaxonomy* openTaxonomy(const std::string &database);
     NcbiTaxonomy(const std::string &namesFile,  const std::string &nodesFile, const std::string &mergedFile);
+    NcbiTaxonomy() {};
     ~NcbiTaxonomy();
 
     TaxonNode const * LCA(const std::vector<TaxID>& taxa) const;
@@ -119,7 +120,7 @@ public:
 
     TaxonNode* taxonNodes;
     size_t maxNodes;
-private:
+protected:
     size_t loadNodes(std::vector<TaxonNode> &tmpNodes, const std::string &nodesFile);
     size_t loadMerged(const std::string &mergedFile);
     void loadNames(std::vector<TaxonNode> &tmpNodes, const std::string &namesFile);
