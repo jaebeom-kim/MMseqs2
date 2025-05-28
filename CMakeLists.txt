@@ -167,7 +167,7 @@ if (CYGWIN)
     # default cygwin allocator (dlmalloc) locks on every allocation and destroys MT performance
     add_subdirectory(lib/nedmalloc)
     # IPS4O seems to deadlock on cygwin
-    set(DISABLE_IPS4O 1)
+    # set(DISABLE_IPS4O 1)
 endif()
 
 if ((CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS "5.0.0")
