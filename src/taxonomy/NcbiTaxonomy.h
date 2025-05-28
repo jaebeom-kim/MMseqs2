@@ -76,7 +76,8 @@ static const std::map<std::string, int> NcbiRanks = {{ "forma", 1 },
                                                      { "superphylum", 25 },
                                                      { "subkingdom", 26 },
                                                      { "kingdom", 27 },
-                                                     { "superkingdom", 28 }};
+                                                     { "superkingdom", 28 },
+                                                     { "domain", 28 }};
 
 static const std::map<std::string, char> NcbiShortRanks = {{ "species", 's' },
                                                            { "genus", 'g' },
@@ -85,7 +86,8 @@ static const std::map<std::string, char> NcbiShortRanks = {{ "species", 's' },
                                                            { "class", 'c' },
                                                            { "phylum", 'p' },
                                                            { "kingdom", 'k' },
-                                                           { "superkingdom", 'd' }};
+                                                           { "superkingdom", 'd' },
+                                                           { "domain", 'd' }};
 
 class NcbiTaxonomy {
 public:
